@@ -1,0 +1,27 @@
+.information > h1 {
+  color: blue;
+}
+.information {
+  padding: 20px;
+}
+/* .information > .section {
+  color: pink;
+} */
+.information > .section > input {
+  padding: 12px;
+  border-radius: 8px;
+  margin: 8px;
+  font-size: 1rem;
+}
+.information > .section > textarea {
+  padding: 12px;
+  border-radius: 8px;
+  margin: 8px;
+  font-size: 1rem;
+  min-width: 400px;
+}
+.information > .section > .button-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
