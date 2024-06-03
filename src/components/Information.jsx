@@ -4,7 +4,6 @@ import "../styles/Information.css";
 function Information() {
   return (
     <div className="information">
-      <h1>Information Side</h1>
       <Section sectionTitle={"General Information"}>
         <InputField placeholder={"First Name"} />
         <InputField placeholder={"Last Name"} />
@@ -15,7 +14,7 @@ function Information() {
       <Section sectionTitle={"Educational Experience"}>
         <InputField placeholder={"Degree"} />
         <InputField placeholder={"University"} />
-        <InputField placeholder={"City"} />
+        <InputField placeholder={"City/Country"} />
         <InputField placeholder={"Start Date"} />
         <InputField placeholder={"End Date"} />
       </Section>

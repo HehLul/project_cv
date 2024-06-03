@@ -1,7 +1,9 @@
-function Resume() {
+function Resume({ firstName, lastName }) {
   return (
-    <div>
-      <h1>Resume Side</h1>
+    <div className="resume">
+      <div className="header"></div>
+      <h1>FirstName LastName</h1>
+      <p>email linkden phonenumber</p>
     </div>
   );
 }
