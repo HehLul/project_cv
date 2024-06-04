@@ -1,16 +1,20 @@
 import Section from "./Section";
 import InputField from "./InputField";
 import "../styles/Information.css";
-function Information() {
+import { useState } from "react";
+import GeneralInformationSection from "./GeneralInformationSection";
+function Information({ generalDataSaved }) {
+  const [generalData, setGeneralData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    phone: "",
+    linkdn: "",
+  });
+  function handleGeneralInfoChange() {}
   return (
     <div className="information">
-      <Section sectionTitle={"General Information"}>
-        <InputField placeholder={"First Name"} />
-        <InputField placeholder={"Last Name"} />
-        <InputField placeholder={"Email"} />
-        <InputField placeholder={"Phone Number"} />
-        <InputField placeholder={"Linkdn"} />
-      </Section>
+      <GeneralInformationSection></GeneralInformationSection>
       <Section sectionTitle={"Educational Experience"}>
         <InputField placeholder={"Degree"} />
         <InputField placeholder={"University"} />
