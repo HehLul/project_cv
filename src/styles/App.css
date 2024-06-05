@@ -32,7 +32,9 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-
+body {
+  background-color: #eee;
+}
 .card {
   padding: 2em;
 }
@@ -46,7 +48,7 @@
   justify-content: space-between;
   gap: 20px;
 }
-.content > div {
+/* .content > div {
   width: 100%;
-  background: #eee;
-}
+  background: white;
+} */

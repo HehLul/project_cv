@@ -15,7 +15,7 @@ function GeneralInformationSection({
 
   return (
     <>
-      <section className="general-information-section">
+      <section className="section">
         <h1>General Information</h1>
         <form
           onSubmit={(e) => {
@@ -63,8 +63,10 @@ function GeneralInformationSection({
             value={data.linkdn}
             disabled={saveButtonPressed}
           />
-          <button>Edit</button>
-          {!saveButtonPressed && <button type="submit">Save</button>}
+          <div className="button-row">
+            <button>Edit</button>
+            {!saveButtonPressed && <button type="submit">Save</button>}
+          </div>
         </form>
       </section>
     </>

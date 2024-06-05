@@ -54,32 +54,38 @@ function App() {
   }
 
   return (
-    <div className="content">
-      <Information
-        handleSaveButtonPressed={handleSaveButtonPressed}
-        setData={setData}
-        data={data}
-        educationalData={educationalData}
-        setEducationalData={setEducationalData}
-        saveButtonPressed={saveButtonPressed}
-        educationalSaveButtonPressed={educationalSaveButtonPressed}
-        handleEducationalSaveButtonPressed={handleEducationalSaveButtonPressed}
-        professionalData={professionalData}
-        setProfessionalData={setProfessionalData}
-        professionalSaveButtonPressed={professionalSaveButtonPressed}
-        handleProfessionalSaveButtonPressed={
-          handleProfessionalSaveButtonPressed
-        }
-      />
-      <Resume
-        saveButtonPressed={saveButtonPressed}
-        educationalSaveButtonPressed={educationalSaveButtonPressed}
-        data={data}
-        educationalData={educationalData}
-        professionalData={professionalData}
-        professionalSaveButtonPressed={professionalSaveButtonPressed}
-      />
-    </div>
+    <>
+      <h1>Seamlessly Format Your Resume!</h1>
+      <h3>Get started by filling in your data and pressing save!</h3>
+      <div className="content">
+        <Information
+          handleSaveButtonPressed={handleSaveButtonPressed}
+          setData={setData}
+          data={data}
+          educationalData={educationalData}
+          setEducationalData={setEducationalData}
+          saveButtonPressed={saveButtonPressed}
+          educationalSaveButtonPressed={educationalSaveButtonPressed}
+          handleEducationalSaveButtonPressed={
+            handleEducationalSaveButtonPressed
+          }
+          professionalData={professionalData}
+          setProfessionalData={setProfessionalData}
+          professionalSaveButtonPressed={professionalSaveButtonPressed}
+          handleProfessionalSaveButtonPressed={
+            handleProfessionalSaveButtonPressed
+          }
+        />
+        <Resume
+          saveButtonPressed={saveButtonPressed}
+          educationalSaveButtonPressed={educationalSaveButtonPressed}
+          data={data}
+          educationalData={educationalData}
+          professionalData={professionalData}
+          professionalSaveButtonPressed={professionalSaveButtonPressed}
+        />
+      </div>
+    </>
   );
 }
 

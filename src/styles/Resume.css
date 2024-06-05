@@ -1,0 +1,25 @@
+.resume {
+  font-family: "Times New Roman", Times, serif;
+  padding: 50px 25px;
+  line-height: 25px;
+  width: 100%;
+  height: fit-content;
+  background: white;
+}
+
+.educational-experience-section,
+.professional-experience-section {
+  text-align: left;
+}
+.educational-experience-section > .section-title,
+.professional-experience-section > .section-title {
+  text-decoration: underline;
+}
+.title-and-date > h2 {
+  max-width: 320px;
+}
+.title-and-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

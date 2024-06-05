@@ -15,7 +15,7 @@ function ProfessionalExperienceSection({
 
   return (
     <>
-      <section className="professional-experience-section">
+      <section className="section">
         <h1>Professional Experience</h1>
         <form
           onSubmit={(e) => {
@@ -63,10 +63,12 @@ function ProfessionalExperienceSection({
             value={professionalData.end}
             disabled={professionalSaveButtonPressed}
           />
-          <button>Edit</button>
-          {!professionalSaveButtonPressed && (
-            <button type="submit">Save</button>
-          )}
+          <div className="button-row">
+            <button>Edit</button>
+            {!professionalSaveButtonPressed && (
+              <button type="submit">Save</button>
+            )}
+          </div>
         </form>
       </section>
     </>

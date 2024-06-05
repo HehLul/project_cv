@@ -3,6 +3,8 @@
 }
 .information {
   padding: 20px;
+  width: 100%;
+  background: white;
 }
 /* .information > .section {
   color: pink;
@@ -24,4 +26,21 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  margin: 8px;
+  font-size: 1rem;
+}
+textarea {
+  padding: 12px;
+  border-radius: 8px;
+  margin: 8px;
+  font-size: 1rem;
+  min-width: 400px;
+}
+.button-row > button {
+  margin: 0 10px;
 }

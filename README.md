@@ -9,9 +9,10 @@ To create a CV application generator. A program where users can enter their info
 
 ## LEARNING CURVES
 
-### \* way of setting input fields to work with usestates
+- ### way of setting input fields to work with usestates
 
-- First, setup for input tag
+* First, setup for input tag
+
   ```<input
               type="text"
               name="fname"
@@ -21,7 +22,7 @@ To create a CV application generator. A program where users can enter their info
             />
   ```
 
-- Second, setup usestate var
+* Second, setup usestate var
 
 ```
 
@@ -35,9 +36,9 @@ linkdn: "",
 
 ```
 
-- Third, setupd handleInputChange function
+- Third, setup handleInputChange function
 
-```
+````
 
 const handleInputChange = (e) => {
 const { name, value } = e.target;
@@ -47,3 +48,15 @@ setData({
 });
 console.log();
 };```
+
+
+
+
+
+* ### NEVER forget to put {} inside props
+
+
+
+
+
+````

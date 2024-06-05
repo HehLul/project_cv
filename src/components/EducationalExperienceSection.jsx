@@ -15,7 +15,7 @@ function EducationalExperienceSection({
 
   return (
     <>
-      <section className="educational-experience-section">
+      <section className="section">
         <h1>Educational Experience</h1>
         <form
           onSubmit={(e) => {
@@ -63,8 +63,12 @@ function EducationalExperienceSection({
             value={educationalData.end}
             disabled={educationalSaveButtonPressed}
           />
-          <button>Edit</button>
-          {!educationalSaveButtonPressed && <button type="submit">Save</button>}
+          <div className="button-row">
+            <button>Edit</button>
+            {!educationalSaveButtonPressed && (
+              <button type="submit">Save</button>
+            )}
+          </div>
         </form>
       </section>
     </>
