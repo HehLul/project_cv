@@ -47,7 +47,8 @@ setData({
 [name]: value,
 });
 console.log();
-};```
+};
+```
 
 
 
