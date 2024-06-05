@@ -1,13 +1,18 @@
 import Section from "./Section";
 import InputField from "./InputField";
 import "../styles/Information.css";
+import EducationalExperienceSection from "./EducationalExperienceSection";
 import { useState } from "react";
 import GeneralInformationSection from "./GeneralInformationSection";
 function Information({
   handleSaveButtonPressed,
   setData,
   data,
+  educationalData,
+  setEducationalData,
   saveButtonPressed,
+  educationalSaveButtonPressed,
+  handleEducationalSaveButtonPressed,
 }) {
   return (
     <div className="information">
@@ -17,13 +22,13 @@ function Information({
         handleSaveButtonPressed={handleSaveButtonPressed}
         saveButtonPressed={saveButtonPressed}
       ></GeneralInformationSection>
-      <Section sectionTitle={"Educational Experience"}>
-        <InputField placeholder={"Degree"} />
-        <InputField placeholder={"University"} />
-        <InputField placeholder={"City/Country"} />
-        <InputField placeholder={"Start Date"} />
-        <InputField placeholder={"End Date"} />
-      </Section>
+
+      <EducationalExperienceSection
+        educationalData={educationalData}
+        setEducationalData={setEducationalData}
+        handleEducationalSaveButtonPressed={handleEducationalSaveButtonPressed}
+        educationalSaveButtonPressed={educationalSaveButtonPressed}
+      ></EducationalExperienceSection>
       <Section sectionTitle={"Professional Experience"}>
         <InputField placeholder={"Title"} />
         <InputField placeholder={"City/Country"} />

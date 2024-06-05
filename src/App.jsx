@@ -11,13 +11,29 @@ function App() {
     phone: "",
     linkdn: "",
   });
+  const [educationalData, setEducationalData] = useState({
+    degree: "",
+    university: "",
+    location: "",
+    start: "",
+    end: "",
+  });
   const [saveButtonPressed, setSaveButtonPressed] = useState(false);
-
+  const [educationalSaveButtonPressed, setEducationalSaveButtonPressed] =
+    useState(false);
   function handleSaveButtonPressed() {
     saveButtonPressed
       ? setSaveButtonPressed(false)
       : setSaveButtonPressed(true);
     console.log("data.fname in App Component: " + data.fname);
+  }
+  function handleEducationalSaveButtonPressed() {
+    educationalSaveButtonPressed
+      ? setEducationalSaveButtonPressed(false)
+      : setEducationalSaveButtonPressed(true);
+    console.log(
+      "educationalData.degree in App Component: " + educationalData.degree
+    );
   }
 
   return (
@@ -26,12 +42,17 @@ function App() {
         handleSaveButtonPressed={handleSaveButtonPressed}
         setData={setData}
         data={data}
+        educationalData={educationalData}
+        setEducationalData={setEducationalData}
         saveButtonPressed={saveButtonPressed}
+        educationalSaveButtonPressed={educationalSaveButtonPressed}
+        handleEducationalSaveButtonPressed={handleEducationalSaveButtonPressed}
       />
       <Resume
         saveButtonPressed={saveButtonPressed}
+        educationalSaveButtonPressed={educationalSaveButtonPressed}
         data={data}
-        setSaveButtonPressed={setSaveButtonPressed}
+        educationalData={educationalData}
       />
     </div>
   );
