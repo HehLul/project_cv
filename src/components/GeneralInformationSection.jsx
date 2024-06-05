@@ -1,4 +1,9 @@
-function GeneralInformationSection({ data, setData, handleSaveButtonPressed }) {
+function GeneralInformationSection({
+  data,
+  setData,
+  handleSaveButtonPressed,
+  saveButtonPressed,
+}) {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setData({
@@ -7,10 +12,7 @@ function GeneralInformationSection({ data, setData, handleSaveButtonPressed }) {
     });
     console.log();
   };
-  const handleSaveClicked = (e) => {
-    e.preventDefault();
-    setData(data);
-  };
+
   return (
     <>
       <section className="general-information-section">
@@ -27,6 +29,7 @@ function GeneralInformationSection({ data, setData, handleSaveButtonPressed }) {
             placeholder="First Name"
             onChange={handleInputChange}
             value={data.fname}
+            disabled={saveButtonPressed}
           />
           <input
             type="text"
@@ -34,6 +37,7 @@ function GeneralInformationSection({ data, setData, handleSaveButtonPressed }) {
             placeholder="Last Name"
             onChange={handleInputChange}
             value={data.lname}
+            disabled={saveButtonPressed}
           />
           <input
             type="text"
@@ -41,6 +45,7 @@ function GeneralInformationSection({ data, setData, handleSaveButtonPressed }) {
             placeholder="Email"
             onChange={handleInputChange}
             value={data.email}
+            disabled={saveButtonPressed}
           />
           <input
             type="text"
@@ -48,6 +53,7 @@ function GeneralInformationSection({ data, setData, handleSaveButtonPressed }) {
             placeholder="Phone Number"
             onChange={handleInputChange}
             value={data.phone}
+            disabled={saveButtonPressed}
           />
           <input
             type="text"
@@ -55,9 +61,10 @@ function GeneralInformationSection({ data, setData, handleSaveButtonPressed }) {
             name="linkdn"
             onChange={handleInputChange}
             value={data.linkdn}
+            disabled={saveButtonPressed}
           />
           <button>Edit</button>
-          <button type="submit">Save</button>
+          {!saveButtonPressed && <button type="submit">Save</button>}
         </form>
       </section>
     </>

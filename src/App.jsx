@@ -14,13 +14,10 @@ function App() {
   const [saveButtonPressed, setSaveButtonPressed] = useState(false);
 
   function handleSaveButtonPressed() {
-    setSaveButtonPressed(true);
+    saveButtonPressed
+      ? setSaveButtonPressed(false)
+      : setSaveButtonPressed(true);
     console.log("data.fname in App Component: " + data.fname);
-    <Resume
-      saveButtonPressed={saveButtonPressed}
-      data={data}
-      setSaveButtonPressed={setSaveButtonPressed}
-    />;
   }
 
   return (
@@ -29,6 +26,7 @@ function App() {
         handleSaveButtonPressed={handleSaveButtonPressed}
         setData={setData}
         data={data}
+        saveButtonPressed={saveButtonPressed}
       />
       <Resume
         saveButtonPressed={saveButtonPressed}

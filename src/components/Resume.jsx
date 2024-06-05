@@ -1,16 +1,6 @@
 import React, { useEffect } from "react";
 
 function Resume({ saveButtonPressed, data, setSaveButtonPressed }) {
-  // useEffect(() => {
-  //   if (saveButtonPressed) {
-  //     const timer = setTimeout(() => {
-  //       setSaveButtonPressed(false);
-  //     }, 2000); // Adjust the delay as needed (in milliseconds)
-
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [saveButtonPressed, setSaveButtonPressed]);
-
   console.log(
     "saveButtonPressed inside Resume Component: " + saveButtonPressed
   );

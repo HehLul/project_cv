@@ -3,18 +3,19 @@ import InputField from "./InputField";
 import "../styles/Information.css";
 import { useState } from "react";
 import GeneralInformationSection from "./GeneralInformationSection";
-function Information({ handleSaveButtonPressed, setData, data }) {
-  // function handleSaveButtonPressed(e) {
-  //   e.preventDefault();
-  //   console.log(e.target);
-  //   console.log("data.fname in Information Componenet:" + data.fname);
-  // }
+function Information({
+  handleSaveButtonPressed,
+  setData,
+  data,
+  saveButtonPressed,
+}) {
   return (
     <div className="information">
       <GeneralInformationSection
         data={data}
         setData={setData}
         handleSaveButtonPressed={handleSaveButtonPressed}
+        saveButtonPressed={saveButtonPressed}
       ></GeneralInformationSection>
       <Section sectionTitle={"Educational Experience"}>
         <InputField placeholder={"Degree"} />
