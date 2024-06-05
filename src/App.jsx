@@ -18,8 +18,17 @@ function App() {
     start: "",
     end: "",
   });
+  const [professionalData, setProfessionalData] = useState({
+    title: "",
+    location: "",
+    detail: "",
+    start: "",
+    end: "",
+  });
   const [saveButtonPressed, setSaveButtonPressed] = useState(false);
   const [educationalSaveButtonPressed, setEducationalSaveButtonPressed] =
+    useState(false);
+  const [professionalSaveButtonPressed, setProfessionalSaveButtonPressed] =
     useState(false);
   function handleSaveButtonPressed() {
     saveButtonPressed
@@ -35,6 +44,14 @@ function App() {
       "educationalData.degree in App Component: " + educationalData.degree
     );
   }
+  function handleProfessionalSaveButtonPressed() {
+    professionalSaveButtonPressed
+      ? setProfessionalSaveButtonPressed(false)
+      : setProfessionalSaveButtonPressed(true);
+    console.log(
+      "professionalData.title in App Component: " + professionalData.title
+    );
+  }
 
   return (
     <div className="content">
@@ -47,12 +64,20 @@ function App() {
         saveButtonPressed={saveButtonPressed}
         educationalSaveButtonPressed={educationalSaveButtonPressed}
         handleEducationalSaveButtonPressed={handleEducationalSaveButtonPressed}
+        professionalData={professionalData}
+        setProfessionalData={setProfessionalData}
+        professionalSaveButtonPressed={professionalSaveButtonPressed}
+        handleProfessionalSaveButtonPressed={
+          handleProfessionalSaveButtonPressed
+        }
       />
       <Resume
         saveButtonPressed={saveButtonPressed}
         educationalSaveButtonPressed={educationalSaveButtonPressed}
         data={data}
         educationalData={educationalData}
+        professionalData={professionalData}
+        professionalSaveButtonPressed={professionalSaveButtonPressed}
       />
     </div>
   );

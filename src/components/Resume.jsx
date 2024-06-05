@@ -5,6 +5,8 @@ function Resume({
   data,
   educationalData,
   educationalSaveButtonPressed,
+  professionalSaveButtonPressed,
+  professionalData,
 }) {
   console.log(
     "saveButtonPressed inside Resume Component: " + saveButtonPressed
@@ -31,7 +33,23 @@ function Resume({
             <h3>{educationalData.university}</h3>
             <h4>{educationalData.location}</h4>
             <div className="dates">
-              {educationalData.start} {educationalData.end}
+              <small>
+                {educationalData.start} {educationalData.end}
+              </small>
+            </div>
+          </>
+        )}
+      </div>
+      <div className="professional-experience-section">
+        {professionalSaveButtonPressed && (
+          <>
+            <h2>{professionalData.title}</h2>
+            <h4>{professionalData.location}</h4>
+            <p>{professionalData.detail}</p>
+            <div className="dates">
+              <small>
+                {professionalData.start} {professionalData.end}
+              </small>
             </div>
           </>
         )}

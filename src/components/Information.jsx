@@ -2,6 +2,7 @@ import Section from "./Section";
 import InputField from "./InputField";
 import "../styles/Information.css";
 import EducationalExperienceSection from "./EducationalExperienceSection";
+import ProfessionalExperienceSection from "./ProfessionalExperienceSection";
 import { useState } from "react";
 import GeneralInformationSection from "./GeneralInformationSection";
 function Information({
@@ -13,6 +14,10 @@ function Information({
   saveButtonPressed,
   educationalSaveButtonPressed,
   handleEducationalSaveButtonPressed,
+  professionalData,
+  setProfessionalData,
+  professionalSaveButtonPressed,
+  handleProfessionalSaveButtonPressed,
 }) {
   return (
     <div className="information">
@@ -29,13 +34,21 @@ function Information({
         handleEducationalSaveButtonPressed={handleEducationalSaveButtonPressed}
         educationalSaveButtonPressed={educationalSaveButtonPressed}
       ></EducationalExperienceSection>
-      <Section sectionTitle={"Professional Experience"}>
+      {/* <Section sectionTitle={"Professional Experience"}>
         <InputField placeholder={"Title"} />
         <InputField placeholder={"City/Country"} />
         <InputField placeholder={"Details"} />
         <InputField placeholder={"Start Date"} />
         <InputField placeholder={"End Date"} />
-      </Section>
+      </Section> */}
+      <ProfessionalExperienceSection
+        professionalData={professionalData}
+        setProfessionalData={setProfessionalData}
+        handleProfessionalSaveButtonPressed={
+          handleProfessionalSaveButtonPressed
+        }
+        professionalSaveButtonPressed={professionalSaveButtonPressed}
+      ></ProfessionalExperienceSection>
     </div>
   );
 }
