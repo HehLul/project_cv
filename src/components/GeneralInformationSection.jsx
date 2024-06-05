@@ -1,13 +1,4 @@
-import { useState } from "react";
-import Button from "./Button";
-function GeneralInformationSection({ sectionTitle, children }) {
-  const [data, setData] = useState({
-    fname: "",
-    lname: "",
-    email: "",
-    phone: "",
-    linkdn: "",
-  });
+function GeneralInformationSection({ data, setData, handleSaveButtonPressed }) {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setData({
@@ -16,11 +7,15 @@ function GeneralInformationSection({ sectionTitle, children }) {
     });
     console.log();
   };
+  const handleSaveClicked = (e) => {
+    e.preventDefault();
+    setData(data);
+  };
   return (
     <>
       <section className="general-information-section">
         <h1>General Information</h1>
-        <form action="">
+        <form onSubmit={handleSaveClicked}>
           <input
             type="text"
             name="fname"
@@ -56,6 +51,10 @@ function GeneralInformationSection({ sectionTitle, children }) {
             onChange={handleInputChange}
             value={data.linkdn}
           />
+          <button>Edit</button>
+          <button type="submit" onClick={handleSaveButtonPressed}>
+            Save
+          </button>
         </form>
       </section>
     </>
