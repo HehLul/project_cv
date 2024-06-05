@@ -55,9 +55,3 @@ console.log();
 
 
 * ### NEVER forget to put {} inside props
-
-
-
-
-
-````
