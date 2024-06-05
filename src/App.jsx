@@ -2,21 +2,39 @@ import "./styles/App.css";
 import Information from "./components/Information";
 import Resume from "./components/Resume";
 import { useState } from "react";
+
 function App() {
   const [data, setData] = useState({
-    firstName: "FIRSTNAME",
-    lastName: "LASTNAME",
-    email: "random@gmail.com",
-    phoneNumber: "123-344-4343",
+    fname: "",
+    lname: "",
+    email: "",
+    phone: "",
+    linkdn: "",
   });
+  const [saveButtonPressed, setSaveButtonPressed] = useState(false);
+
   function handleSaveButtonPressed() {
     setSaveButtonPressed(true);
+    console.log("data.fname in App Component: " + data.fname);
+    <Resume
+      saveButtonPressed={saveButtonPressed}
+      data={data}
+      setSaveButtonPressed={setSaveButtonPressed}
+    />;
   }
-  const [saveButtonPressed, setSaveButtonPressed] = useState(false);
+
   return (
     <div className="content">
-      <Information setSaveButtonPressed={setSaveButtonPressed}></Information>
-      <Resume data={data}></Resume>
+      <Information
+        handleSaveButtonPressed={handleSaveButtonPressed}
+        setData={setData}
+        data={data}
+      />
+      <Resume
+        saveButtonPressed={saveButtonPressed}
+        data={data}
+        setSaveButtonPressed={setSaveButtonPressed}
+      />
     </div>
   );
 }

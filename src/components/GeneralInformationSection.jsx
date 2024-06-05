@@ -15,7 +15,12 @@ function GeneralInformationSection({ data, setData, handleSaveButtonPressed }) {
     <>
       <section className="general-information-section">
         <h1>General Information</h1>
-        <form onSubmit={handleSaveClicked}>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSaveButtonPressed();
+          }}
+        >
           <input
             type="text"
             name="fname"
@@ -52,9 +57,7 @@ function GeneralInformationSection({ data, setData, handleSaveButtonPressed }) {
             value={data.linkdn}
           />
           <button>Edit</button>
-          <button type="submit" onClick={handleSaveButtonPressed}>
-            Save
-          </button>
+          <button type="submit">Save</button>
         </form>
       </section>
     </>
