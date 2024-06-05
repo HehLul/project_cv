@@ -38,7 +38,7 @@ linkdn: "",
 
 - Third, setup handleInputChange function
 
-````
+```
 
 const handleInputChange = (e) => {
 const { name, value } = e.target;
