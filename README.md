@@ -12,18 +12,18 @@ To create a CV application generator. A program where users can enter their info
 ### \* way of setting input fields to work with usestates
 
 - First, setup for input tag
-  \*\*\*<input
+  ```<input
               type="text"
               name="fname"
               placeholder="First Name"
               onChange={handleInputChange}
               value={data.fname}
             />
-  \*\*\*
+  ```
 
 - Second, setup usestate var
 
----
+```
 
 const [data, setData] = useState({
 fname: "",
@@ -33,11 +33,11 @@ phone: "",
 linkdn: "",
 });
 
----
+```
 
 - Third, setupd handleInputChange function
 
----
+```
 
 const handleInputChange = (e) => {
 const { name, value } = e.target;
@@ -46,4 +46,4 @@ setData({
 [name]: value,
 });
 console.log();
-};\*\*\*
+};```
